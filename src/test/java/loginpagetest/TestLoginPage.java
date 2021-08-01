@@ -5,9 +5,9 @@
  */
 package loginpagetest;
 
+import org.testng.annotations.Test;
 import base.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.LoginPage;
 
@@ -22,7 +22,8 @@ public class TestLoginPage extends TestBase{
     public void testLoginPage(){
         LoginPage loginpage = homepage.clickLoginButton();
         IndexPage indexpage = loginpage.enterCredential(prop.getProperty("username"), prop.getProperty("password"));
-        String actualtitel = indexpage.getTitel();      
+        String actualtitel = indexpage.getTitel();  
+        System.out.println("actualtitel ===="+actualtitel);
         Assert.assertEquals(actualtitel, "Login - Wealth Management", "Invalid Title");
     }
 }

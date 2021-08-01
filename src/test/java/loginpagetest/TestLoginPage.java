@@ -24,6 +24,6 @@ public class TestLoginPage extends TestBase{
         IndexPage indexpage = loginpage.enterCredential(prop.getProperty("username"), prop.getProperty("password"));
         String actualtitel = indexpage.getTitel();  
         System.out.println("actualtitel ===="+actualtitel);
-        Assert.assertEquals(actualtitel, "Login - Wealth Management", "Invalid Title");
+        Assert.assertEquals(actualtitel, "Login - Wealth Management111", "Invalid Title");
     }
 }
